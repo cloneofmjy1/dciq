@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DCIQ kiosk · Domestic content calculator · Imperial Star</title>
-<script id="dciq-kiosk-config">window.DCIQ_KIOSK=new URLSearchParams(location.search).get('kiosk')==='0'?false:{"pin": "2468", "idleSeconds": 180, "promptSeconds": 20, "doneSeconds": 10, "backupFiles": true, "version": {"kiosk": "1.0.0", "base": "dciq-v3 3.0.0-candidate", "baseSha256": "eeffcb4b207fceb5eb772e101d5702d10143156b8aca0442744d85453b9cc94a", "leadsModuleSha256": "d74f1968a5265fa4eb47ec7f98e5d19405faaea81478d310ab65ee92b25e8460", "jspdf": "2.5.1"}};</script>
+<script id="dciq-kiosk-config">window.DCIQ_KIOSK=new URLSearchParams(location.search).get('kiosk')==='0'?false:{"pin": "2468", "idleSeconds": 180, "promptSeconds": 20, "doneSeconds": 10, "backupFiles": true, "version": {"kiosk": "1.0.0", "base": "dciq-v3 3.0.0-candidate", "baseSha256": "856f70b9026a93ac20c3b53121d9cd42d9588e0dd40213f167a40a957825ed61", "leadsModuleSha256": "d74f1968a5265fa4eb47ec7f98e5d19405faaea81478d310ab65ee92b25e8460", "jspdf": "2.5.1"}};</script>
 <script id="jspdf">/** @license
  *
  * jsPDF - PDF Document creation from JavaScript
@@ -565,6 +565,7 @@ textarea.control{min-height:110px;padding:12px 14px;font-size:16px;font-weight:4
 .foot details{max-width:760px}
 .foot summary{cursor:pointer;color:var(--forest);font-weight:600;min-height:44px;display:flex;align-items:center}
 .foot details p{margin-top:8px;line-height:1.55}
+.foot{flex-wrap:wrap}.foot .disc{flex-basis:100%;font-size:13px;line-height:1.5;color:var(--ink-2)}
 .mobile-bar{display:none}
 .toast{position:fixed;left:50%;bottom:24px;z-index:300;transform:translateX(-50%);max-width:calc(100vw - 32px);padding:14px 20px;border-radius:var(--r);background:var(--ink);color:var(--white);font-size:16px;box-shadow:0 6px 20px rgba(0,0,0,.18)}
 .toast:empty{display:none}
@@ -607,7 +608,7 @@ textarea.control{min-height:110px;padding:12px 14px;font-size:16px;font-weight:4
 </section>
 <aside class="result" id="results" aria-label="Live result"></aside>
 </main>
-<footer class="foot"><span class="tag">Reliably Built.</span><details><summary>How this is calculated</summary><p>Each switch marks a manufactured product component (MPC) as US-made; off means no domestic credit is assumed, and every listed component is assumed present and new. Module points are multiplied by the US-cell module's share of installed MWdc; the imported-cell module adds zero module points. Inverter and tracker or racking choices apply to the whole project. Production points count only with US manufacture and every listed MPC US-made; under the US-wafer election, cells also need exclusively US wafers. The complete IRS Notice 2025-08 table for the installation changes together, including BOS. The threshold comes from the credit and construction start.</p><p>This is a manufactured-products percentage only. It does not establish construction qualification, steel and iron compliance, prevailing wage or credit eligibility. Prices and US sourcing are discussion assumptions. <a href="https://www.irs.gov/pub/irs-drop/n-25-08.pdf" target="_blank" rel="noopener">IRS Notice 2025-08</a></p></details></footer>
+<footer class="foot"><span class="tag">Reliably Built.</span><details><summary>How this is calculated</summary><p>Each switch marks a manufactured product component (MPC) as US-made; off means no domestic credit is assumed, and every listed component is assumed present and new. Module points are multiplied by the US-cell module's share of installed MWdc; the imported-cell module adds zero module points. Inverter and tracker or racking choices apply to the whole project. Production points count only with US manufacture and every listed MPC US-made; under the US-wafer election, cells also need exclusively US wafers. The complete IRS Notice 2025-08 table for the installation changes together, including BOS. The threshold comes from the credit and construction start.</p><p>This is a manufactured-products percentage only. It does not establish construction qualification, steel and iron compliance, prevailing wage or credit eligibility. Prices and US sourcing are discussion assumptions. <a href="https://www.irs.gov/pub/irs-drop/n-25-08.pdf" target="_blank" rel="noopener">IRS Notice 2025-08</a></p></details><p class="disc">For reference only. The results are estimates, not tax, legal or financial advice. Consult a qualified tax or legal professional about your project.</p></footer>
 <div class="mobile-bar" id="mobile-bar"></div><div id="live" class="sr-only" role="status" aria-live="polite"></div><div id="toast" class="toast" role="status"></div><input id="file" type="file" accept=".json,application/json" hidden>
 <script id="dciq-engine">
 'use strict';
